@@ -22,12 +22,12 @@
 			<set>
 				<bean class="com.jm.authcenter.redis.RedisCache">
 					<property name="redisTemplate" ref="redisTemplate" />
-					<property name="name" value="shiro-activeSessionCache"/>
+					<property name="name" value="shiro-activeSessionCache"/>  <!-- shiro session缓存，默认30分钟生命 -->
 					<!--<property name="defaultTTL" value="900" /> 15分钟 -->
 				</bean>
 				<bean class="com.jm.authcenter.redis.RedisCache">
 					<property name="redisTemplate" ref="redisTemplate" />
-					<property name="name" value="com.jm.authcenter.shiro.UserRealm.authorizationCache"/>
+					<property name="name" value="com.jm.authcenter.shiro.UserRealm.authorizationCache"/>  <!-- rememberMe 缓存，不rememberMe就没有记录 -->
 					<!--<property name="defaultTTL" value="900" /> 15分钟 -->
 				</bean>
 			</set>
