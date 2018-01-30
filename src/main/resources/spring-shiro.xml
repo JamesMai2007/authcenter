@@ -10,7 +10,9 @@
      	">
 
 	<!-- 继承自AuthorizingRealm的自定义Realm,即指定Shiro验证用户登录的类为自定义的UserRealm.java -->
-	<bean id="userRealm" class="com.jm.authcenter.shiro.UserRealm"/>
+	<bean id="userRealm" class="com.jm.authcenter.shiro.UserRealm">
+		<property name="cachingEnabled" value="false" />
+	</bean>
 
 	<!-- 如果配置了rememberMe而不加这个sessionIdCookie的话，用户关闭浏览器的时候不会删除session，而一直保存到redis里 -->
 	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">

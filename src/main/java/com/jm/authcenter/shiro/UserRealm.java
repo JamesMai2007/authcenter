@@ -31,7 +31,6 @@ public class UserRealm extends AuthorizingRealm {
             info.addStringPermission("usr");
         }
 
-
         return info;
     }
 
